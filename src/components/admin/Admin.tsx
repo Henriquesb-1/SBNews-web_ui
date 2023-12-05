@@ -7,6 +7,7 @@ import SiteAdmin from "./siteAdmin/SiteAdmin";
 import NewsManager from "./newsManager/NewsManager";
 
 import styles from "./admin.module.scss"
+import Category from "./newsManager/categories/Category";
 
 interface AdminProps {
     path: string;
