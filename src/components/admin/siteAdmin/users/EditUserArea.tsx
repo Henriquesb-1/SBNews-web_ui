@@ -92,7 +92,7 @@ export default function EditUserArea({ muted, banned, userToEdit, users, setUser
                             <select name="user-type" id="user-type" value={userType} onChange={e => setUserType(e.target.value)}>
                                 <option value="normal">Normal</option>
                                 <option value="admin">Administrador</option>
-                                <option value="news_manager">Editor de notícias</option>
+                                <option value="news_creator">Editor de notícias</option>
                             </select>
                         </div>
 

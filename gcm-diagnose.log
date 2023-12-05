@@ -1,0 +1,195 @@
+﻿Diagnose log at 2023-12-05T19:47:23Z
+
+AppPath: C:\Program Files\Git\mingw64\bin\git-credential-manager.exe
+InstallDir: C:\Program Files\Git\mingw64\bin\
+Version: 2.4.1
+
+------------
+Diagnostic: Environment
+Skipped: False
+Success: True
+Exception: None
+Log:
+OSType: Windows
+OSVersion: 10.0 (build 22621)
+Reading environment variables... OK
+ Variables:
+HOMEPATH=\Users\joseh
+DriverData=C:\Windows\System32\Drivers\DriverData
+COMPUTERNAME=DESKTOP-8EI6LLU
+GIT_TRACE2_PARENT_SID=59e5a77a-2d3b-4945-9024-3b3e6a2feabb
+CommonProgramFiles(x86)=C:\Program Files (x86)\Common Files
+OneDrive=C:\Users\joseh\OneDrive
+ChocolateyLastPathUpdate=133048239811402923
+TMP=C:\Users\joseh\AppData\Local\Temp
+PROCESSOR_REVISION=9702
+PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.CPL
+GIT_ASKPASS=c:\Users\joseh\AppData\Local\Programs\Microsoft VS Code\resources\app\extensions\git\dist\askpass.sh
+GIT_EXEC_PATH=C:/Program Files/Git/mingw64/libexec/git-core
+TEMP=C:\Users\joseh\AppData\Local\Temp
+LOCALAPPDATA=C:\Users\joseh\AppData\Local
+MSYSTEM=MINGW64
+TERM=xterm-256color
+M2_HOME=C:\Program Files (x86)\apache-maven-3.9.3
+ProgramW6432=C:\Program Files
+JAVA_HOME=C:\Program Files\Java\jdk-17
+USERDOMAIN=DESKTOP-8EI6LLU
+ProgramFiles(x86)=C:\Program Files (x86)
+Path=C:/Program Files/Git/mingw64/libexec/git-core;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\joseh\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files\Microsoft\jdk-11.0.16.101-hotspot\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\ProgramData\chocolatey\bin;C:\Program Files\MongoDB\Server\4.2\bin;C:\Program Files\Java\jdk-17\bin;C:\Program Files (x86)\apache-maven-3.9.3\bin;C:\Program Files\nodejs\;C:\Python310;C:\Program Files\Git\cmd;C:\Program Files\Python;C:\Users\joseh\AppData\Roaming\npm;C:\Users\joseh\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\ant\bin
+TERM_PROGRAM=vscode
+PROCESSOR_LEVEL=6
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 151 Stepping 2, GenuineIntel
+TMPDIR=C:\Users\joseh\AppData\Local\Temp
+VSCODE_GIT_ASKPASS_EXTRA_ARGS=--ms-enable-electron-run-as-node
+TERM_PROGRAM_VERSION=1.80.2
+VSCODE_GIT_ASKPASS_MAIN=c:\Users\joseh\AppData\Local\Programs\Microsoft VS Code\resources\app\extensions\git\dist\askpass-main.js
+PSModulePath=C:\Users\joseh\OneDrive\Documentos\WindowsPowerShell\Modules;C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules
+PUBLIC=C:\Users\Public
+NUMBER_OF_PROCESSORS=12
+CommonProgramFiles=C:\Program Files (x86)\Common Files
+VSCODE_INJECTION=1
+VSCODE_GIT_IPC_HANDLE=\\.\pipe\vscode-git-61fbd36834-sock
+CHROME_CRASHPAD_PIPE_NAME=\\.\pipe\LOCAL\crashpad_16068_XPFKYSHULCOIWHYK
+ProgramFiles=C:\Program Files (x86)
+ProgramData=C:\ProgramData
+MSYS=disable_pcon
+ChocolateyInstall=C:\ProgramData\chocolatey
+PLINK_PROTOCOL=ssh
+VSCODE_GIT_ASKPASS_NODE=C:\Users\joseh\AppData\Local\Programs\Microsoft VS Code\Code.exe
+SystemRoot=C:\WINDOWS
+ORIGINAL_XDG_CURRENT_DESKTOP=undefined
+HOME=C:\Users\joseh
+python=C:\Python310\Python
+CommonProgramW6432=C:\Program Files\Common Files
+LOGONSERVER=\\DESKTOP-8EI6LLU
+USERPROFILE=C:\Users\joseh
+COLORTERM=truecolor
+USERDOMAIN_ROAMINGPROFILE=DESKTOP-8EI6LLU
+APPDATA=C:\Users\joseh\AppData\Roaming
+HOMEDRIVE=C:
+ANT_HOME=C:\Program Files\ant\bin
+USERNAME=joseh
+PROCESSOR_ARCHITEW6432=AMD64
+PROCESSOR_ARCHITECTURE=x86
+OS=Windows_NT
+ComSpec=C:\WINDOWS\system32\cmd.exe
+SystemDrive=C:
+windir=C:\WINDOWS
+LANG=en_US.UTF-8
+ALLUSERSPROFILE=C:\ProgramData
+
+
+------------
+Diagnostic: File system
+Skipped: False
+Success: True
+Exception: None
+Log:
+Temporary directory is 'C:\Users\joseh\AppData\Local\Temp\'...
+Checking basic file I/O...
+Writing to temporary file 'C:\Users\joseh\AppData\Local\Temp\171f46adbe73330158567e1a'... OK
+Reading from temporary file 'C:\Users\joseh\AppData\Local\Temp\171f46adbe73330158567e1a'... OK
+Deleting temporary file 'C:\Users\joseh\AppData\Local\Temp\171f46adbe73330158567e1a'... OK
+Testing IFileSystem instance...
+UserHomePath: C:\Users\joseh
+UserDataDirectoryPath: C:\Users\joseh\.gcm
+GetCurrentDirectory(): C:\Users\joseh\OneDrive\Documentos\Programming\Own\noticias\web_ui
+
+------------
+Diagnostic: Networking
+Skipped: False
+Success: True
+Exception: None
+Log:
+Checking networking and HTTP stack...
+Creating HTTP client... OK
+IsNetworkAvailable: True
+Sending HEAD request to http://example.com...Sending HEAD request to https://example.com... OK
+ OK
+Acquiring free TCP port... OK
+Testing local HTTP loopback connections...
+Creating new HTTP listener for http://localhost:52650/... OK
+Waiting for loopback connection... OK
+Writing response... OK
+Waiting for response data... OK
+Loopback connection data OK
+
+------------
+Diagnostic: Git
+Skipped: False
+Success: True
+Exception: None
+Log:
+Getting Git version... OK
+Git version is '2.43.0.windows.1'
+Locating current repository... OK
+Git repository at 'C:/Users/joseh/OneDrive/Documentos/Programming/Own/noticias/web_ui/.git'
+Listing all Git configuration... OK
+Git configuration:
+file:C:/Program Files/Git/etc/gitconfig	diff.astextplain.textconv=astextplain
+file:C:/Program Files/Git/etc/gitconfig	filter.lfs.clean=git-lfs clean -- %f
+file:C:/Program Files/Git/etc/gitconfig	filter.lfs.smudge=git-lfs smudge -- %f
+file:C:/Program Files/Git/etc/gitconfig	filter.lfs.process=git-lfs filter-process
+file:C:/Program Files/Git/etc/gitconfig	filter.lfs.required=true
+file:C:/Program Files/Git/etc/gitconfig	http.sslbackend=openssl
+file:C:/Program Files/Git/etc/gitconfig	http.sslcainfo=C:/Program Files/Git/mingw64/etc/ssl/certs/ca-bundle.crt
+file:C:/Program Files/Git/etc/gitconfig	core.autocrlf=true
+file:C:/Program Files/Git/etc/gitconfig	core.fscache=true
+file:C:/Program Files/Git/etc/gitconfig	core.symlinks=true
+file:C:/Program Files/Git/etc/gitconfig	pull.rebase=false
+file:C:/Program Files/Git/etc/gitconfig	credential.helper=manager
+file:C:/Program Files/Git/etc/gitconfig	credential.https://dev.azure.com.usehttppath=true
+file:C:/Program Files/Git/etc/gitconfig	init.defaultbranch=master
+file:C:/Users/joseh/.gitconfig	core.editor=code --wait
+file:C:/Users/joseh/.gitconfig	core.autocelf=true
+file:C:/Users/joseh/.gitconfig	user.name=Henrique Silva
+file:C:/Users/joseh/.gitconfig	user.email=henriquesilva9648@outlook.com
+file:C:/Users/joseh/.gitconfig	filter.lfs.clean=git-lfs clean -- %f
+file:C:/Users/joseh/.gitconfig	filter.lfs.smudge=git-lfs smudge -- %f
+file:C:/Users/joseh/.gitconfig	filter.lfs.process=git-lfs filter-process
+file:C:/Users/joseh/.gitconfig	filter.lfs.required=true
+file:C:/Users/joseh/.gitconfig	safe.directory=C:/Users/joseh/OneDrive/Documentos/Programming
+file:.git/config	core.repositoryformatversion=0
+file:.git/config	core.filemode=false
+file:.git/config	core.bare=false
+file:.git/config	core.logallrefupdates=true
+file:.git/config	core.ignorecase=true
+file:.git/config	remote.origin.url=https://github.com/Henriquesb-1/SB-News/tree/main
+file:.git/config	remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+
+
+------------
+Diagnostic: Credential storage
+Skipped: False
+Success: True
+Exception: None
+Log:
+ICredentialStore instance is of type: CredentialStore
+Writing test credential... OK
+Reading test credential... OK
+Deleting test credential... OK
+
+------------
+Diagnostic: Microsoft authentication (AAD/MSA)
+Skipped: False
+Success: True
+Exception: None
+Log:
+Broker is not enabled.
+Flow type is: Auto
+Gathering MSAL token cache data... OK
+CacheDirectory: C:\Users\joseh\AppData\Local\.IdentityService
+CacheFileName: msal.cache
+CacheFilePath: C:\Users\joseh\AppData\Local\.IdentityService\msal.cache
+Creating cache helper... OK
+Verifying MSAL token cache persistence... OK
+
+------------
+Diagnostic: GitHub API
+Skipped: False
+Success: True
+Exception: None
+Log:
+Using 'https://github.com/' as API target.
+Querying '/meta' endpoint... OK
+
