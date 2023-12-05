@@ -1,0 +1,82 @@
+.commentTextArea {
+    display: flex;
+}
+
+.commentsInput {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.commentUserText {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    img {
+        max-width: 60px;
+        max-height: 60px;
+        border-radius: 30px;
+    }
+
+    textarea {
+        width: 600px;
+        height: 90px;
+        border: none;
+        color: inherit;
+        background: none;
+        border-radius: 15px;
+        resize: none;
+    }
+
+    textarea:focus {
+        border: none;
+        outline: none;
+    }
+}
+
+.postCommentsAction {
+    button {
+        margin: 5px;
+    }
+}
+
+.allComments {
+    width: 100%;
+    list-style-type: none;
+    margin: 20px 0px;
+    padding: 0px;
+}
+
+.commentsGroup {
+    margin: 30px 0;
+    padding: 10px;
+}
+
+@media screen and (max-width: 580px) {
+    .commentsGroup {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .commentTextArea {
+        width: 100%;
+    }
+
+    .commentUserText {
+        img {
+            display: none;
+        }
+
+        textarea {
+            width: 100%;
+        }
+    }
+
+    .comments-input {
+        width: 100%;
+    }
+}
+
+

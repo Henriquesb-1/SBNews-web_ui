@@ -1,0 +1,26 @@
+.editUserArea {
+    text-align: center;
+    width: 100%;
+
+    .inputArea {
+        border: 1px solid #2e2e2e;
+        padding: 15px;
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .banButton {
+        background-color: #5f0000;
+    }
+
+    .banButton:hover {
+        background-color: #310000;
+    }
+
+    select, input {
+        width: 500px;
+        height: 30px;
+        border-radius: 5px;
+        margin-bottom: 15px;
+    }
+}

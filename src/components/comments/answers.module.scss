@@ -1,0 +1,71 @@
+.answer {
+    cursor: pointer;
+}
+
+.seeAnswers {
+    margin: 7px 0;
+
+    button {
+        background-color: rgba(114, 113, 112, 0.5);
+        border: none;
+        border-radius: 20px;
+        padding: 10px;
+        color: #fff;
+        cursor: pointer;
+    }
+}
+
+.answers, .hideAnswers {
+    list-style-type: none;
+    margin: 20px 10px;
+}
+
+.answers {
+    opacity: 1;
+    transition: cubic-bezier(0.165, 0.84, 0.44, 1) .5s;
+}
+
+.hideAnswers {
+    opacity: 0;
+}
+
+
+.answerInput {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 25px;
+
+    .answerText {
+        flex-grow: 1;
+    }
+
+    .answerText textarea {
+        width: 100%;
+        background: none;
+        border: none;
+        color: inherit;
+        resize: none;
+        font-style: inherit;
+    }
+
+    textarea:focus {
+        outline: none;
+    }
+
+    .postButton button {
+        background: none;
+        border: none;
+        margin: 0;
+        padding: 0;
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .see-answers {
+        button {
+            font-size: .7em;
+        }
+    }
+}

@@ -1,0 +1,42 @@
+.reportButton {
+    display: flex;
+    flex-direction: row-reverse;
+
+    i {
+        font-size: 1.2em;
+        color: #b69c0b;
+    }
+}
+
+.reportButton > button {
+    display: flex;
+    background: none;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.reportBox {
+    background-color: #2227;
+    color: var(--font-color);
+    z-index: 50;
+
+    h5 {
+        margin: 0px;
+    }
+}
+
+.option {
+    display: flex;
+
+    :last-of-type {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+.confirm {
+    display: flex;
+    justify-content: center;
+}

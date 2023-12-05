@@ -1,0 +1,31 @@
+.authForm {
+    width: 1000px;
+    height: 500px;
+}
+
+.authInput {
+    width: 100%;
+    text-align: center;
+    margin: 15px 0;
+
+    input {
+        width: 70%;
+        height: 25px;
+        border: none;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .authForm {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .authInput {
+        input {
+            width: 100%;
+        }
+    }
+    
+}

@@ -1,0 +1,52 @@
+.userProfile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 600px;
+}
+
+.userProfileCover {
+    img {
+        height: 250px;
+        width: 250px;
+        border-radius: 175px;
+    }
+}
+
+.field {
+    width: 100%;
+    margin: 10px 0;
+
+    div, 
+    input {
+        width: 100%;
+        text-align: center;
+    }
+
+    input {
+        height: 30px;
+        border-radius: 5px;
+    }
+
+    input:disabled {
+        background: none;
+        border: none;
+        outline: none;
+        color: #fff;
+    }
+}
+
+.submitButtons {
+    div {
+        margin: 0 5px;
+    }
+}
+
+.info {
+    margin: 10px 0;
+
+    span {
+        margin: 10px 0;
+    }
+}

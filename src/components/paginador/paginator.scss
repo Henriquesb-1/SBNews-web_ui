@@ -1,0 +1,49 @@
+.pagination-container {
+    display: flex;
+    justify-content: center;
+
+    nav {
+        ul {
+            display: flex;
+            list-style-type: none;
+
+            .active {
+                background-color: rgba(80, 80, 150, 0.7);
+                border-radius: 5px;
+            }
+
+            li {
+                padding: 1px;
+            }
+
+            li a,
+            li button {
+                width: 30px;
+                height: 30px;
+
+                padding: 7px;
+                border: none;
+                border-radius: 5px;
+
+                cursor: pointer;
+                transition: cubic-bezier(0.075, 0.82, 0.165, 1) 2s;
+            }
+
+            li a {
+                color: #fff;
+                text-decoration: none;
+            }
+
+            li button {
+                color: #000;
+            }
+
+            li a:hover,
+            li button:hover {
+                background-color: rgba(80, 80, 150, 0.5);
+            }
+        }
+    }
+
+
+}

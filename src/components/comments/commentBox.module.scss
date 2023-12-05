@@ -1,0 +1,86 @@
+.commentContext {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    color: #fff;
+}
+
+.commentUserName {
+    width: 100px;
+    height: 50px;
+
+    h3 {
+        font-size: .8em;
+        margin: 0px;
+        margin-block: 0px;
+        margin-inline: 0px;
+        word-wrap: break-word;
+    }
+
+    img {
+        max-width: 40px;
+        height: 40px;
+        border-radius: 20px;
+    }
+}
+
+.commentsContent {
+    position: relative;
+    width: 90%;
+}
+
+.commentText {
+    background-color: rgb(117, 117, 117);
+    padding: 5px;
+    border-radius: 20px;
+    margin-left: 10px;
+
+    p {
+        text-align: start;
+        font-size: .8em;
+        word-wrap: break-word;
+    }
+}
+
+.commentActions {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 5px 0;
+}
+.commentActionsButton {
+    position: relative;
+    background: none;
+    border: none;
+    display: flex;
+    justify-content: flex-end;
+    
+    i {
+        position: absolute;
+        right: 0;
+        cursor: pointer;
+        z-index: 50;
+        font-size: 20px;
+        writing-mode: vertical-lr;
+    }
+}
+
+.commentComplement {
+    display: flex;
+    justify-content: space-between;
+}
+
+.datePosted span {
+    font-size: 11px;
+}
+
+@media screen and (max-width: 480px) {
+    .actionsButtons {
+        button {
+            img {
+                width: 18px;
+                height: 18px;
+            }
+        }
+    }
+}

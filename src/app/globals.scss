@@ -1,0 +1,163 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body,
+.app {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #222;
+    color: #fff;
+}
+
+@mixin flexLayout($direction, $justifyContent, $alignItems) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justifyContent;
+    align-items: $alignItems;
+}
+
+@mixin buttonLayout($backgroundColor, $fontColor) {
+    background: $backgroundColor;
+    color: $fontColor;
+    border: none;
+    padding: 7px;
+    cursor: pointer;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.app {
+    @include flexLayout(column, space-between, unset)
+}
+
+.text-white {
+    color: #fff;
+}
+
+.text-center {
+    text-align: center
+}
+
+.flex-row {
+    @include flexLayout(row, baseline, baseline);
+}
+
+.flex-row-center {
+    @include flexLayout(row, center, baseline);
+}
+
+.flex-row-around {
+    @include flexLayout(row, space-around, center);
+}
+
+.flex-column-center {
+    @include flexLayout(column, baseline, center);
+}
+
+.flex-column-between {
+    @include flexLayout(column, space-between, center);
+}
+
+.clean-button {
+    @include buttonLayout(none, unset)
+}
+
+.button-save {
+    @include buttonLayout(rgb(0, 121, 0), #fff);
+}
+
+.button-save:hover {
+    @include buttonLayout(rgb(0, 97, 0), #fff);
+}
+
+.cancel-button {
+    @include buttonLayout(#8b8b8b, #fff)
+}
+.cancel-button:hover {
+    @include buttonLayout(#636363, #fff)
+}
+
+.delete-button {
+    @include buttonLayout(rgb(136, 0, 0), #fff)
+}
+
+.delete-button:hover {
+    @include buttonLayout(rgb(94, 0, 0), #fff)
+}
+
+.danger-zone {
+    background-color: rgb(68, 0, 0);
+    padding: 15px;
+    border: 1px solid rgb(0, 0, 87);
+    border-radius: 15px;
+}
+
+.user-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+}
+
+.clean-link {
+    text-decoration: none;
+    color: #fff;
+    padding: 7px;
+}
+
+.clean-link:hover {
+    background-color: rgb(102, 0, 94);
+}
+
+.list {
+    list-style-type: none;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.full-height {
+    height: 100%;
+}
+
+.margin-x {
+    margin: 0 15px;
+}
+
+.margin-y {
+    margin: 15px 0;
+}
+
+.margin {
+    margin: 10px;
+}
+
+.input {
+    width: 800px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    // outline: none;
+}
+
+.input:disabled {
+    background-color: #aaa;
+}
+
+.input:focus {
+    outline-color: rgb(0, 69, 116);
+}
+
+@media screen and (max-width: 768px) {
+    .input {
+        width: 100%;
+    }
+}

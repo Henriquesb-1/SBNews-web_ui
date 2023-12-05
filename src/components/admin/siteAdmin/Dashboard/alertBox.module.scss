@@ -1,0 +1,13 @@
+.alertBox {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    left: 0;
+    background-color: rgb(177, 174, 0);
+    right: 0;
+    margin: 0 auto;
+
+    button {
+        margin: 0 5px;
+    }
+}

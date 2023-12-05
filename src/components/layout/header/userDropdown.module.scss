@@ -1,0 +1,50 @@
+.userAvatar {
+    max-height: 70px;
+    cursor: pointer;
+}
+
+.linkWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menuItems {
+    position: absolute;
+    top: 70px;
+    background-color: #222;
+    padding: 20px;
+    transition: cubic-bezier(0.215, 0.610, 0.355, 1) 1s;
+}
+
+.menuItem {
+    margin-bottom: 10px;
+    text-align: center;
+
+    a, button {
+        padding: 7px;
+        width: 100%;
+    }
+
+    a:hover, button:hover {
+        background-color: aqua;
+    }
+
+    h3 {
+        color: #fff;
+        margin: 0px;
+    }
+
+    button {
+        color: #fff;
+        margin: 0px;
+    }
+}
+
+.authLink {
+    margin: 10px 0;
+
+    h3 {
+        margin: 0px;
+    }
+}

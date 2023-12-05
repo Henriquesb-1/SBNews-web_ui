@@ -1,0 +1,19 @@
+.topNews {
+    width: 700px;
+    overflow-x: hidden;
+}
+
+.topNewsItems {
+    display: grid;
+    grid-template-columns: repeat(5, 100%);
+}
+
+.sidePageInfo {
+    position: relative;
+}
+
+@media screen and (max-width: 768px) {
+    .topNews {
+        width: 100%;
+    }
+}

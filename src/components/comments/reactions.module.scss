@@ -1,0 +1,22 @@
+.reactionButtons {
+    display: flex;
+    margin-left: 15px;
+
+    button {
+        display: flex;
+        align-items: center;
+        background: none;
+        border: none;
+        cursor: pointer;
+        // color: #f00;
+
+        span {
+            color: #fff;
+        }
+
+        img {
+            width: 24px;
+            height: 24px;
+        }
+    }
+}

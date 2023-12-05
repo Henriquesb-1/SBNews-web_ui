@@ -1,0 +1,15 @@
+.menu {
+    position: absolute;
+    width: 100%;
+    
+    transition: ease-in .7s;
+    background-color: #ccc;
+
+    z-index: 10;
+}
+
+.menuItem {
+    h2 {
+        text-align: center;
+    }
+}

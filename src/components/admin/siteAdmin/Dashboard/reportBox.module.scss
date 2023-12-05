@@ -1,0 +1,115 @@
+.complementContent {
+    display: none;
+
+    td {
+        .contentToAnalyze {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .content-description {
+                background-color: #999;
+                min-width: 70%;
+                border-radius: 50px;
+            }
+        }
+    }
+}
+
+.complement-content-collapsed {
+    display: table-row !important;
+}
+
+.contentActions {
+    .selectAction {
+        margin: 7px 0;
+    }
+
+    select {
+        width: 500px;
+        height: 30px;
+    }
+
+    button {
+        margin-top: 7px;
+    }
+}
+
+.contentDescription {
+    background-color: #858585;
+    padding: 7px;
+    border-radius: 5px;
+}
+
+.reportBox {
+    background-color: #100b29;
+    text-align: center;
+    width: 90%;
+    margin: 7px;
+}
+
+.boxTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+
+    button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: none;
+        border: none;
+        color: var(--font-color);
+        font-size: 15px;
+        cursor: pointer;
+    }
+
+    i {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 24px;
+        height: 24px;
+    }
+}
+
+.information {
+    display: flex;
+    justify-content: space-between;
+}
+
+.box {
+    width: 100%;
+
+    table {
+        width: 100%;
+        padding: 8px;
+
+        thead {
+            padding: 15px;
+        }
+
+        tbody {
+            width: 100%;
+            padding: 15px;
+
+            tr:nth-child(2n - 1) {
+                background-color: #393a55;
+                cursor: pointer;
+            }
+
+            tr:nth-child(2n - 1):hover {
+                background-color: #313249;
+            }
+        }
+
+        thead tr th,
+        tbody tr td {
+            padding: 15px;
+        }
+    }
+
+
+}

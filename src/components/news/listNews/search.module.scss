@@ -1,0 +1,14 @@
+.searchForm {
+    input {
+        background: none;
+        border: none;
+        color: #fff;
+        height: 20px;
+        margin-bottom: 3px;
+    }
+
+    input:focus {
+        border: none;
+        outline: none;
+    }
+}

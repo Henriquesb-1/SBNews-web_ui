@@ -1,0 +1,43 @@
+.categories {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+}
+
+.listMenu {
+    list-style-type: none;
+    padding: 0px;
+}
+
+.itemHandler {
+    cursor: pointer;
+}
+
+.menuItem {
+    margin: 10px 0;
+    display: block;
+}
+
+.treeIcon {
+    svg {
+        transition: cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+    }
+}
+
+.listMenu {
+    list-style-type: none;
+    position: relative;
+    padding: 0px;
+}
+
+@media screen and (max-width: 768px) {
+    .categories {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .categories {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

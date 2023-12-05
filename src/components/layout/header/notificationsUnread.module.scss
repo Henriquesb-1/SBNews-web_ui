@@ -1,0 +1,44 @@
+.notification {
+    padding: 5px;
+    margin: 5px 0;
+    cursor: pointer;
+}
+
+.notification:hover {
+    background-color: #6d6d6d;
+}
+
+.unreadNotifications {
+    position: relative;
+    align-self: flex-start;
+    margin: -10px -15px;
+}
+
+.unreadNotifications .unreadNotificationsCount {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+
+    width: 15px;
+    height: 15px;
+
+    background-color: #f00;
+    border-radius: 12px;
+
+    text-align: center;
+}
+
+.unreadNotifications .bell {
+    button {
+        cursor: pointer;
+    }
+}
+
+.notifications {
+    background-color: #000;
+    position: absolute;
+    left: -200px;
+    width: 250px;
+    max-height: 400px;
+    overflow-y: auto;
+}

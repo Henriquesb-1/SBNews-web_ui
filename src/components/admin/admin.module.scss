@@ -1,0 +1,103 @@
+.admin {
+    height: 100%;
+}
+
+.adminMenu {
+    position: fixed;
+    top: 0px;
+    left: 0%;
+    background-color: rgb(0, 50, 63);
+    height: 100%;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.adminPageLink {
+    width: 100%;
+    padding: 0px;
+    margin: 20px 0px;
+
+    h2 {
+        margin: 0px;
+        padding: 10px;
+    }
+}
+
+.admin-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.back-home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    right: 0;
+    bottom: 0;
+
+    background-color: var(--bg-color);
+
+    width: 30px;
+    height: 30px;
+
+    padding: 30px;
+    margin: 0 10px;
+    border-radius: 30px;
+
+    a {
+        color: var(--fontColor);
+        text-decoration: none;
+        font-size: 25px;
+    }
+}
+
+.menuHandler {
+    position: fixed;
+    left: 0;
+    z-index: 200;
+
+    button {
+        font-size: 1.2rem;
+        transition: cubic-bezier(0.075, 0.82, 0.165, 1) 1.4s;
+    }
+}
+
+@media screen and (max-width: 1120px) {
+    .adminMenu {
+        left: -100%;
+        z-index: -10;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .admin {
+        grid-template-columns: auto;
+        grid-template-rows: 70px 1fr;
+        color: var(--font-color);
+        height: 100%;
+    }
+
+    .admin-menu {
+        display: flex;
+        height: 100%;
+    }
+
+    .admin-page-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0px;
+    }
+}
+
+@media screen and (max-width: 468px) { 
+    .admin {
+        font-size: 12px;
+    }
+}
