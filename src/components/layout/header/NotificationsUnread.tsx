@@ -16,7 +16,7 @@ export default function NotificationsUnread() {
 
         Request.get(`/users/auth`, userToken)
             .then(async resp => {
-                const { data } = await Request.get(`/notification?userId=${resp.id}`, userToken);
+                const { data } = await Request.get(`/notification?name=${resp.name}`, userToken);
                 const totalUnread = await Request.get(`/notification/unread/${resp.id}`, userToken);
                 setNotifications(data);
                 setUnreadNotificationsCount(totalUnread);
