@@ -1,3 +1,4 @@
+import Contact from "@/components/about/Contact";
 import styles from "./footer.module.scss";
 
 export default function Footer() {
@@ -7,7 +8,7 @@ export default function Footer() {
                 <ul className="list">
                     <h4>Site</h4>
                     <li>
-                        <a className="clean-link"  href="/about/technologies">Tecnologias usadas</a>
+                        <a className="clean-link" href="/about/technologies">Tecnologias usadas</a>
                     </li>
                 </ul>
 
@@ -15,10 +16,13 @@ export default function Footer() {
                     <h4>Author</h4>
 
                     <li>
-                        <a className="clean-link"  href="/about/author">Contato</a>
+                        <div className={styles.contact}>
+                            <h2 className={styles.contactTitle}>Contato:</h2>
+                            <Contact />
+                        </div>
                     </li>
                     <li>
-                        <a className="clean-link"  href="/about/portfolio">Portfólio</a>
+                        <a className="clean-link" href="/about/portfolio">Portfólio</a>
                     </li>
                 </ul>
             </div>
