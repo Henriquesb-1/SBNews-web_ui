@@ -40,7 +40,7 @@ export default function Dashboard() {
 
                 <div>
                     <div>
-                        <img src={newsMoreAccessed?.imageUrl} alt={newsMoreAccessed?.title} />
+                        <img className="full-width" src={newsMoreAccessed?.imageUrl} alt={newsMoreAccessed?.title} />
                     </div>
 
                     <div>

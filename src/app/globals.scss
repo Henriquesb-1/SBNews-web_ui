@@ -59,7 +59,13 @@ body {
 }
 
 .flex-column-center {
-    @include flexLayout(column, baseline, center);
+    @include flexLayout(column, normal, center);
+}
+
+@media screen and (max-width: 552px) {
+    .flex-column-center {
+        @include flexLayout(column, baseline, normal);
+    }
 }
 
 .flex-column-between {
