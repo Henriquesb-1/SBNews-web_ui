@@ -59,7 +59,7 @@ function Answers({ commentId, commentIndex, newsId }: AnswersProps) {
                         imageUrl: user?.imageUrl || ""
                     },
                     commentId,
-                    content: userTagged ? userTagged.name + content : content,
+                    content: userTagged ? userTagged.name + " - " + content : content,
                     datePosted,
                     reactions: {
                         agreeCount: 0,
@@ -69,6 +69,7 @@ function Answers({ commentId, commentIndex, newsId }: AnswersProps) {
 
                 setAnswers(answers.concat(newAnswer));
                 setContent("");
+                setUserTagged(undefined);
             })
             .catch(err => FeedBack.error(err));
     }
@@ -87,7 +88,7 @@ function Answers({ commentId, commentIndex, newsId }: AnswersProps) {
             } else {
                 return answers.map((answer, index: number) => {
                     return (
-                        <li className={`${styles.answer} margin-y`} style={{cursor: user ? "pointer" : "default"}} id={`answer-${answer.answerId}`} key={`answer-${index}`} title={user ? `Responder comentário de ${answer.author.name}` : `Resposta de ${answer.author.name}`} onClick={e => tagUserAndPostAnswer(answer)}>
+                        <li className={`${styles.answer} margin-y`} style={{ cursor: user ? "pointer" : "default" }} id={`answer-${answer.answerId}`} key={`answer-${index}`} title={user ? `Responder comentário de ${answer.author.name}` : `Resposta de ${answer.author.name}`} onClick={e => tagUserAndPostAnswer(answer)}>
                             <CommentBox comment={answer} comments={answers} setComments={setAnswers} newsId={newsId} />
                         </li>
                     )
@@ -106,7 +107,6 @@ function Answers({ commentId, commentIndex, newsId }: AnswersProps) {
             isMuted: false
         }
         setUserTagged(user);
-        setContent(answer.author.name + " - ");
     }
 
     return (
@@ -118,16 +118,22 @@ function Answers({ commentId, commentIndex, newsId }: AnswersProps) {
             <ul className={seeAnswers ? styles.answers : styles.hideAnswers} id={`element-${commentIndex}`}>
                 {renderAnswers()}
 
-                {totalAnswers > answers.length ? (
-                    <div>
-                        <button className="load-more-button button-save" onClick={loadMoreAnswers}>Mais respostas({totalAnswers - answers.length})</button>
-                    </div>
-                ) : <></>}
-
                 {user && !user?.isMuted ? (
                     <div className={styles.answerInput} id="answer-box">
                         <div className={styles.answerText}>
-                            <textarea placeholder="Participe" value={content} onChange={e => setContent(e.target.value)} />
+                            {userTagged ? (
+                                <div className={`${styles.userTaggedInfo} flex-row-center`}>
+                                    <div>
+                                        <span style={{ textAlign: "start" }}>Respondendo {userTagged.name}</span>
+                                    </div>
+                                    <div>
+                                        <button onClick={e => setUserTagged(undefined)} className="cancel-button">Cancelar</button>
+                                    </div>
+                                </div>
+                            ) : false}
+                            <div className="margin-y">
+                                <textarea placeholder="Participe(Clique em uma resposta para responde-la)" value={content} onChange={e => setContent(e.target.value)} />
+                            </div>
                         </div>
 
                         <div className={styles.postButton}>
@@ -135,6 +141,12 @@ function Answers({ commentId, commentIndex, newsId }: AnswersProps) {
                                 <img src={postIcon.src} />
                             </button>
                         </div>
+                    </div>
+                ) : <></>}
+
+                {totalAnswers > answers.length ? (
+                    <div className="margin-y">
+                        <button className="load-more-button button-save" onClick={loadMoreAnswers}>Mais respostas({totalAnswers - answers.length})</button>
                     </div>
                 ) : <></>}
             </ul>

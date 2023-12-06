@@ -37,7 +37,9 @@
     height: 25px;
 
     .answerText {
+        position: relative;
         flex-grow: 1;
+        margin: 15px 0;
     }
 
     .answerText textarea {
@@ -47,6 +49,14 @@
         color: inherit;
         resize: none;
         font-style: inherit;
+    }
+
+    .answerText span {
+        font-size: .7em;
+    }
+
+    .answerText .userTaggedInfo {
+        
     }
 
     textarea:focus {
