@@ -37,10 +37,10 @@ export default async function ListNews({ filter, pageUrl, currentPage, param, va
             else {
                 return data.map((news: any, index: number) => {
                     return (
-                        <section key={`news-list-${index}`} style={{ width: "100%" }}>
+                        <div key={`news-list-${index}`} style={{ width: "100%" }}>
                             <NewsBox key={`news-box-${index}`} title={news.title} category={news.category.name} description={news.description}
                                 link={`/read?p=title&v=${news.title}`} imageURL={news.imageUrl} linkTitle={news.title} />
-                        </section>
+                        </div>
                     )
                 })
             }
@@ -54,10 +54,10 @@ export default async function ListNews({ filter, pageUrl, currentPage, param, va
 
                 <section>
                     <Search />
-                    <div className="list-news">
+                    <section className="list-news">
                         {renderNews()}
                         <Paginator PageUrl={`${pageUrl}`} pages={pages} currentPage={currentPage} />
-                    </div>
+                    </section>
                 </section>
 
                 <section>
