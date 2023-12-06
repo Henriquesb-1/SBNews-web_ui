@@ -57,7 +57,7 @@ export default function NewsForm({ isInCreateMode, newsToEdit, setMode }: NewsFo
 
         if (isInCreateMode) {
             const date = new Date();
-            const dateCreated = `${date.getFullYear()}-${date.getMonth()}-${date.getDate()}`;
+            const dateCreated = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
             const imageUrl = newsCover ? `http://localhost:3001/news/cover/${newsCover.name}` : "http://localhost:3001/news/cover/default.jpeg";
 
 
