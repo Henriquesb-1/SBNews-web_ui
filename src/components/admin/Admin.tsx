@@ -97,7 +97,7 @@ export default function Admin({ path, page }: AdminProps) {
         <>
             <div className={styles.menuHandler}>
                 <button className="clean-button" onClick={() => setIsMenuVisible(!isMenuVisible)} title={isMenuVisible ? "Esconder menu" : "Ver menu"} style={{ transform: isMenuVisible ? "rotateY(180deg)" : "rotateY(0deg)" }}>
-                    <svg height="36px" width="36px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 223.413 223.413">
+                    <svg height="30px" width="30px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 223.413 223.413">
                     <g>
                         <g>
                             <g>

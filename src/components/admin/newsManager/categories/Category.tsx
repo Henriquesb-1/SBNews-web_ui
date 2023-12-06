@@ -33,7 +33,7 @@ export default function Category() {
     return (
         <section className="flex-column-center">
             {categoryMode === CategoryMode.RENDER ? (
-                <div>
+                <div className="flex-row-center margin-y">
                     <button className="button-save" onClick={e => setCategoryMode(CategoryMode.CREATE)}>Criar nova</button>
                 </div>
             ) : false}
