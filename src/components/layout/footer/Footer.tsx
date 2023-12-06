@@ -6,12 +6,8 @@ export default function Footer() {
             <div className="flex-row-around">
                 <ul className="list">
                     <h4>Site</h4>
-
                     <li>
-                        <a className="clean-link" href="/about/licence">Licenças</a>
-                    </li>
-                    <li>
-                        <a className="clean-link"  href="/about/technologies">Tecnologias</a>
+                        <a className="clean-link"  href="/about/technologies">Tecnologias usadas</a>
                     </li>
                 </ul>
 
