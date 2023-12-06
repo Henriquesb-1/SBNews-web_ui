@@ -8,7 +8,7 @@ export default async function ReadNews({ newsTitle }: { newsTitle: string }) {
     try {
         const newsRequest = await Request.fetch(`/news?filter=read&title=${newsTitle}`, { cache: 'no-store' });
         const news: NewsRead = await newsRequest.json();
-        
+
         return (
             <>
                 <article>
@@ -24,7 +24,7 @@ export default async function ReadNews({ newsTitle }: { newsTitle: string }) {
                                                     <span>{news.author}</span>
                                                 </a>
                                             </div>
-    
+
                                             <div>
                                                 <span>{news.dateCreated}</span>
                                             </div>
@@ -37,11 +37,11 @@ export default async function ReadNews({ newsTitle }: { newsTitle: string }) {
                                 </div>
                             </div>
                         </section>
-    
+
                         <div className="related-news-container">
                             <RelatedNews />
                         </div>
-    
+
                         <section id="comments" className={styles.commentSection}>
                             <Comments newsId={news.id} />
                         </section>
@@ -50,6 +50,10 @@ export default async function ReadNews({ newsTitle }: { newsTitle: string }) {
             </>
         )
     } catch (error) {
-        return <h1>Error</h1>
+        return (
+            <div>
+                <h2>Essa noticia nao existe ou pode ter sido excluida</h2>
+            </div>
+        )
     }
 }
