@@ -1,4 +1,5 @@
 import Layout from "@/components/layout/Layout";
+import Notification from "@/components/user/Notifications";
 
 interface ParamsProps {
     params: { name: string };
@@ -9,7 +10,7 @@ export default function Page({ params }: ParamsProps) {
 
     return (
         <Layout>
-            <div>{name}</div>
+            <Notification userName={name} />
         </Layout>
     )
 }

@@ -1,0 +1,22 @@
+.notifications {
+    width: 1000px;
+
+    table {
+        border: 1px solid #313131;
+    }
+
+    table thead {
+        background-color: rgb(97, 0, 0);
+        
+        tr th {
+            padding: 7px;
+        }
+    }
+
+    table tbody tr {
+        cursor: pointer;
+    }
+    table tbody tr:hover {
+        background-color: #f54;
+    }
+}
