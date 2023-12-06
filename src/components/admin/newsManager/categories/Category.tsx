@@ -16,15 +16,15 @@ export default function Category() {
         switch (categoryMode) {
             case CategoryMode.RENDER:
                 categoryContent = <RenderCategory setCategoryMode={setCategoryMode} setCategoryToEdit={setCategoryToEdit} />
-            break;
+                break;
 
             case CategoryMode.CREATE:
                 categoryContent = <CategoryForm setCategoryMode={setCategoryMode} isInCreateMode />
-            break;
+                break;
 
             case CategoryMode.EDIT:
                 categoryContent = <UpdateCategory categoryToEdit={categoryToEdit} setCategoryMode={setCategoryMode} />
-            break;
+                break;
         }
 
         return categoryContent;
@@ -32,11 +32,11 @@ export default function Category() {
 
     return (
         <section className="flex-column-center">
-            {categoryMode === CategoryMode.RENDER ? (
-                <div className="flex-row-center margin-y">
-                    <button className="button-save" onClick={e => setCategoryMode(CategoryMode.CREATE)}>Criar nova</button>
-                </div>
-            ) : false}
+            <div className="flex-row-center margin-y">
+                <button className="button-save" onClick={e => categoryMode === CategoryMode.RENDER ? setCategoryMode(CategoryMode.CREATE) : setCategoryMode(CategoryMode.RENDER)}>
+                    {categoryMode === CategoryMode.RENDER ? "Criar nova" : "Voltar"}
+                </button>
+            </div>
             <div className="flex-column-center">
                 {renderContent()}
             </div>
