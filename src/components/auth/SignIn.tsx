@@ -29,7 +29,7 @@ export default function SignIn() {
                     </div>
 
                     <div className="flex-row-center">
-                        <input type="text" name="name"
+                        <input type="text" name="name" className="input"
                             id="name" value={name} onChange={e => setName(e.target.value)} />
                     </div>
                 </div>
@@ -40,7 +40,7 @@ export default function SignIn() {
                     </div>
 
                     <div className="flex-row-center">
-                        <input type="password" name="password" id="user-password" value={password} onChange={e => setPassword(e.target.value)} />
+                        <input type="password" name="password"  className="input" id="user-password" value={password} onChange={e => setPassword(e.target.value)} />
                     </div>
                 </div>
 

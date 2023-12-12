@@ -33,7 +33,7 @@ export default function SignUp() {
                     </div>
 
                     <div>
-                        <input placeholder={"Seu nome que será usado na plataforma"} type="text" name="userName"
+                        <input placeholder={"Seu nome que será usado na plataforma"} type="text" name="userName" className="input"
                             id="user-name" value={userName} onChange={e => setUserName(e.target.value)} />
                     </div>
                 </div>
@@ -44,7 +44,7 @@ export default function SignUp() {
                     </div>
 
                     <div>
-                        <input type="text" name="email" id="user-email" value={email} onChange={e => setEmail(e.target.value)} />
+                        <input type="text" name="email" id="user-email" className="input" value={email} onChange={e => setEmail(e.target.value)} />
                     </div>
                     <span>
                         <i style={{ fontSize: ".7em" }}>
@@ -59,7 +59,7 @@ export default function SignUp() {
                     </div>
 
                     <div>
-                        <input type="password" name="password" id="user-password" value={password} onChange={e => setPassword(e.target.value)} />
+                        <input type="password" name="password" id="user-password" className="input" value={password} onChange={e => setPassword(e.target.value)} />
                     </div>
                 </div>
 
@@ -69,7 +69,7 @@ export default function SignUp() {
                     </div>
 
                     <div>
-                        <input type="password" name="confirmPassword" id="user-confirm-password" value={confirmPassword} onChange={e => setConfirmPassword(e.target.value)} />
+                        <input type="password" name="confirmPassword" id="user-confirm-password" className="input" value={confirmPassword} onChange={e => setConfirmPassword(e.target.value)} />
                     </div>
                 </div>
 
@@ -87,7 +87,7 @@ export default function SignUp() {
                 </div>
 
                 <div className={styles.authInput}>
-                        <a className="clean-link" href="/auth/signIn"> Já possui uma conta? Acesse aqui </a>
+                    <a className="clean-link" href="/auth/signIn"> Já possui uma conta? Acesse aqui </a>
                 </div>
             </form>
         </>
