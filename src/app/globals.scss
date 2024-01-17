@@ -148,10 +148,10 @@ body {
 
 .input {
     width: 800px;
-    height: 30px;
+    height: 35px;
     border-radius: 5px;
-    border: none;
-    // outline: none;
+    border: 2px solid #ccc;
+    outline-color: rgb(1, 76, 105);
 }
 
 .input:disabled {
