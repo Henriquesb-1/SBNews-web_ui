@@ -35,7 +35,7 @@ export default function Paginator(props: PaginatorProps) {
 
     return (
         <div className="pagination-container">
-            <nav aria-label="Page navegation">
+            <nav aria-label="Page navegation" >
                 <ul className="pagination">
                     {renderPaginationList()}
                 </ul>
