@@ -35,16 +35,16 @@ export function AuthProvider(props: any) {
 
     function signUp(name: string, email: string, password: string, confirmPassword: string, profileImage: any) {
         const date = new Date();
-        const joinIn = `${date.getFullYear()}-${date.getMonth()}-${date.getDate()}`;
+        const joinIn = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
         const joinInTime = Math.floor(Date.now() / 1000);
 
         const imageUrl = profileImage ? `http://localhost:3001/userAvatar/${profileImage.name}` : "";
 
         Request.post("/users", { name, email, password, confirmPassword, joinIn, imageUrl, joinInTime })
             .then(resp => {
-                setTimeout(() => location.reload(), 3000);
                 if (profileImage) FileUpload.upload(profileImage.file, "userImage", profileImage.name, "/users/upload");
                 FeedBack.success("Cadastro realizado com sucesso");
+                setTimeout(() => location.replace("/auth/signIn"), 3000);
             })
             .catch(err => console.log(err));
     }
