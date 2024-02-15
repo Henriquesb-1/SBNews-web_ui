@@ -21,7 +21,7 @@ export default function Users({page}: {page: string}) {
                         <select name="user-type" id="user-type" onChange={e => setUserType(e.target.value)}>
                             <option value="normal">Normal</option>
                             <option value="admin">Administrador</option>
-                            <option value="news_manager">Editores</option>
+                            <option value="news_creator">Editores</option>
                         </select>
                     </div>
                 </div>
