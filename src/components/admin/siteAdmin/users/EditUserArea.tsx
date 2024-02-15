@@ -6,6 +6,7 @@ import Request from "@/model/Request";
 import FeedBack from "@/utils/FeedBack";
 import AdminConfig from "@/model/AdminConfig";
 import AlertBox from "../Dashboard/AlertBox";
+import UserType from "@/model/UserType";
 
 interface EditUserAreaProps {
     muted: string;
@@ -19,7 +20,7 @@ interface EditUserAreaProps {
 const now = Math.floor(Date.now() / 1000);
 
 export default function EditUserArea({ muted, banned, userToEdit, users, setUsers }: EditUserAreaProps) {
-    const [userType, setUserType] = useState<string>("normal");
+    const [userType, setUserType] = useState<UserType>(UserType.NORMAL);
     const [mutedDays, setMutedDays] = useState<number>(0);
     const [isBanned, setIsBanned] = useState<boolean>(false);
     const [alertBoxProps, setAlertBoxProps] = useState<{ isOpen: boolean, open: string }>({ isOpen: false, open: "" });
@@ -89,10 +90,10 @@ export default function EditUserArea({ muted, banned, userToEdit, users, setUser
                         </div>
 
                         <div>
-                            <select name="user-type" id="user-type" value={userType} onChange={e => setUserType(e.target.value)}>
-                                <option value="normal">Normal</option>
-                                <option value="admin">Administrador</option>
-                                <option value="news_creator">Editor de notícias</option>
+                            <select name="user-type" id="user-type" value={userType} onChange={e => setUserType(Number.parseInt(e.target.value))}>
+                                <option value={UserType.NORMAL}>Normal</option>
+                                <option value={UserType.ADMIN}>Administrador</option>
+                                <option value={UserType.NEWS_MANAGER}>Editor de notícias</option>
                             </select>
                         </div>
 

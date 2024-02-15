@@ -6,8 +6,8 @@ import { useState } from "react";
 import useAuthContext from "@/contextApi/hook/useAuthContext";
 
 import styles from "./userDropdown.module.scss";
-import Request from "@/model/Request";
 import NotificationsUnread from "./NotificationsUnread";
+import UserType from "@/model/UserType";
 
 export default function UserDropDown() {
     const { user, logOut } = useAuthContext();
@@ -21,7 +21,7 @@ export default function UserDropDown() {
         }
 
         if (user) {
-            const canAccessAdminPage = user.userType === "admin" || user.userType === "news_creator";
+            const canAccessAdminPage = user.userType === UserType.ADMIN || user.userType === UserType.NEWS_MANAGER;
 
             return (
                 <div className="flex-row">

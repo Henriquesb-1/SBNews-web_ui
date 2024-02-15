@@ -3,6 +3,7 @@ import { useState } from "react";
 import RenderUsers from "./RenderUsers";
 
 import styles from "./users.module.scss";
+import UserType from "@/model/UserType";
 
 export default function Users({page}: {page: string}) {
     const [userType, setUserType] = useState<string>("normal");
@@ -19,9 +20,9 @@ export default function Users({page}: {page: string}) {
 
                     <div>
                         <select name="user-type" id="user-type" onChange={e => setUserType(e.target.value)}>
-                            <option value="normal">Normal</option>
-                            <option value="admin">Administrador</option>
-                            <option value="news_creator">Editores</option>
+                            <option value={UserType.NORMAL}>Normal</option>
+                            <option value={UserType.ADMIN}>Administrador</option>
+                            <option value={UserType.NEWS_MANAGER}>Editores</option>
                         </select>
                     </div>
                 </div>

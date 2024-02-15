@@ -1,9 +1,11 @@
+import UserType from "./UserType"
+
 export default interface User {
     id: number
     name: string
     imageUrl: string
     joinIn: string
-    userType: string
+    userType: UserType;
 
     mutedTime?: number
     email?: string

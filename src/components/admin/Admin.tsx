@@ -7,6 +7,7 @@ import SiteAdmin from "./siteAdmin/SiteAdmin";
 import NewsManager from "./newsManager/NewsManager";
 
 import styles from "./admin.module.scss"
+import UserType from "@/model/UserType";
 
 interface AdminProps {
     path: string;
@@ -14,7 +15,7 @@ interface AdminProps {
 }
 
 export default function Admin({ path, page }: AdminProps) {
-    const [adminType, setAdminType] = useState<string>("");
+    const [userType, setUserType] = useState<UserType>(UserType.NORMAL);
 
     const [isMenuVisible, setIsMenuVisible] = useState<boolean>(true);
 
@@ -22,27 +23,30 @@ export default function Admin({ path, page }: AdminProps) {
 
     useEffect(() => {
         getUserLogged()
-            .then(resp => setAdminType(resp.userType));
+            .then(resp => {
+                if(resp.userType === UserType.NORMAL) window.location.replace("/");
+                else setUserType(resp.userType);
+            });
     }, []);
 
     function renderAdminContent() {
         let adminContent = <></>
 
-        switch (adminType) {
-            case "admin":
+        switch (userType) {
+            case UserType.ADMIN:
                 adminContent = <SiteAdmin path={path} page={page} />
-                break;
+            break;
 
-            case "news_creator":
+            case UserType.NEWS_MANAGER:
                 adminContent = <NewsManager path={path} page={page} />
-                break;
+            break;
         }
 
         return adminContent;
     }
 
     function renderAdminMenu() {
-        if (adminType === "admin") {
+        if (userType === UserType.ADMIN) {
             return (
                 <>
                     <div className={styles.adminPageLink} style={{ backgroundColor: path == "dashboard" ? `${activeColor}` : "" }}>
@@ -66,7 +70,7 @@ export default function Admin({ path, page }: AdminProps) {
                     </div>
                 </>
             )
-        } else if (adminType === "news_creator") {
+        } else if (userType === UserType.NEWS_MANAGER) {
             return (
                 <>
                     <div className={styles.adminPageLink} style={{ backgroundColor: path == "dashboard" ? `${activeColor}` : "" }}>

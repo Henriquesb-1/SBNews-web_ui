@@ -11,3 +11,10 @@ Initial Release. Features:
 *   Notification page
 *   Log in
 *   Update perfil page
+
+1.1.0
+=====
+
+Code refactoring. Changes:
+
+*   Changed user type id from string to enum
