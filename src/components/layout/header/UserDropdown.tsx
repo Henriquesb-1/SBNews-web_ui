@@ -28,7 +28,7 @@ export default function UserDropDown() {
                     <div className={styles.linkWrapper}>
                         <div className="flex-row">
                             <div className={styles.userAvatar} onClick={() => setIsOpen(!isOpen)}>
-                                <img className="user-avatar" src={user.imageUrl} alt="User avatar" />
+                                <img className="user-avatar" src={user.avatar} alt="User avatar" />
                             </div>
 
                             <NotificationsUnread />

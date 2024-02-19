@@ -38,9 +38,9 @@ export function AuthProvider(props: any) {
         const joinIn = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
         const joinInTime = Math.floor(Date.now() / 1000);
 
-        const imageUrl = profileImage ? `http://localhost:3001/userAvatar/${profileImage.name}` : "";
+        const avatar = profileImage ? `${profileImage.name}` : "";
 
-        Request.post("/users", { name, email, password, confirmPassword, joinIn, imageUrl, joinInTime })
+        Request.post("/users", { name, email, password, confirmPassword, joinIn, avatar, joinInTime })
             .then(resp => {
                 if (profileImage) FileUpload.upload(profileImage.file, "userImage", profileImage.name, "/users/upload");
                 FeedBack.success("Cadastro realizado com sucesso");

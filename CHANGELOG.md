@@ -18,3 +18,8 @@ Initial Release. Features:
 Code refactoring. Changes:
 
 *   Changed user type id from string to enum
+
+1.1.1
+=====
+
+Code refactoring.

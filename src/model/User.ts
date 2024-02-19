@@ -3,7 +3,7 @@ import UserType from "./UserType"
 export default interface User {
     id: number
     name: string
-    imageUrl: string
+    avatar: string
     joinIn: string
     userType: UserType;
 
@@ -20,7 +20,7 @@ export default interface User {
 export interface UserLogged {
     id: number;
     name: string;
-    imageUrl: string;
+    avatar: string;
     isMuted: boolean;
     userType: string
     exp: number;

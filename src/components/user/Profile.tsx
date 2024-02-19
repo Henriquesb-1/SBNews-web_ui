@@ -17,7 +17,7 @@ export default function Profile({ userName }: { userName: string }) {
     const [id, setId] = useState<number>();
     const [name, setName] = useState<string>("");
     const [email, setEmail] = useState<string>("");
-    const [oldImageUrl, setOldImageUrl] = useState<any>();
+    const [oldAvatar, setOldAvatar] = useState<any>();
     const [profilePicture, setProfilePicture] = useState<any>();
     const [joinIn, setJoinIn] = useState<any>();
     const [password, setPassword] = useState<string>("");
@@ -28,10 +28,10 @@ export default function Profile({ userName }: { userName: string }) {
     const [showUpdateProfileFields, setShowUpdateProfileFields] = useState<boolean>(false);
 
     function submit() {
-        const imageUrl = profilePicture ? `http://localhost:3001/userAvatar/${profilePicture.name}` : oldImageUrl;
+        const avatar = profilePicture ? `${profilePicture.name}` : oldAvatar;
         const token = localStorage.getItem("at") || "";
 
-        Request.post("/users/profile", { id, name, email, imageUrl, password, newPassword, confirmPassword }, token)
+        Request.post("/users/profile", { id, name, email, avatar, password, newPassword, confirmPassword }, token)
             .then(resp => {
                 if (profilePicture) FileUpload.upload(profilePicture.file, "userImage", profilePicture.name, "/users/upload");
 
@@ -46,11 +46,11 @@ export default function Profile({ userName }: { userName: string }) {
 
         Request.get(`/users/profile?name=${userName}`)
             .then(resp => {
-                const { id, name, email, imageUrl, joinIn } = resp.user;
+                const { id, name, email, avatar, joinIn } = resp.user;
                 setId(id);
                 setName(name);
                 setEmail(email);
-                setOldImageUrl(imageUrl)
+                setOldAvatar(avatar)
                 setJoinIn(joinIn);
 
                 setCommentsAgree(resp.commentsAgree)
@@ -67,7 +67,7 @@ export default function Profile({ userName }: { userName: string }) {
     return (
         <div className={styles.userProfile}>
             <div className={styles.userProfileCover}>
-                <img src={oldImageUrl} alt={`${name} cover photo`} />
+                <img src={oldAvatar} alt={`${name} cover photo`} />
             </div>
 
             <div className={styles.field}>
