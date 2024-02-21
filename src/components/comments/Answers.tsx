@@ -56,7 +56,7 @@ function Answers({ commentId, commentIndex, newsId }: AnswersProps) {
                     author: {
                         id: user?.id || 0,
                         name: user?.name || "",
-                        imageUrl: user?.imageUrl || ""
+                        imageUrl: user?.avatar || ""
                     },
                     commentId,
                     content: userTagged ? userTagged.name + " - " + content : content,
@@ -101,9 +101,9 @@ function Answers({ commentId, commentIndex, newsId }: AnswersProps) {
         const user: User = {
             id: answer.author.id,
             name: answer.author.name,
-            imageUrl: answer.author.imageUrl,
+            avatar: answer.author.imageUrl,
             joinIn: "",
-            userType: "",
+            userType: 0,
             isMuted: false
         }
         setUserTagged(user);

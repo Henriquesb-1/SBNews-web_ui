@@ -71,7 +71,7 @@ export default function Comments({ newsId }: CommentsProps) {
                     author: {
                         id: user?.id || 0,
                         name: user?.name || "",
-                        imageUrl: user?.imageUrl || ""
+                        imageUrl: user?.avatar || ""
                     },
                     reactions: {
                         agreeCount: 0,
@@ -98,7 +98,7 @@ export default function Comments({ newsId }: CommentsProps) {
                     {user ? (
                         <>
                             <div className={styles.commentUserText} id="comment-box">
-                                <img src={user?.imageUrl} alt="User Image" />
+                                <img src={user?.avatar} alt="User Image" />
                                 <textarea placeholder={isMuted ? "Parece que sua conta foi silenciada, você poderá voltar a partipar em breve" : "Comente sua opinião, criticas, etc..."}
                                     disabled={isMuted} value={content} onChange={e => setContent(e.target.value)} maxLength={1024}>
                                 </textarea>
