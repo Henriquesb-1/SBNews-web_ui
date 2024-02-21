@@ -13,18 +13,6 @@ export default function NewsSlide({ title, imageUrl, itens }: NewsSlideProps) {
     const [offset, setOffset] = useState<number>(0);
     const [currentSlide, setCurrentSlide] = useState<number>(0);
 
-    const increment = () => {
-        setOffset(offset + 100);
-        setCurrentSlide(currentSlide + 1);
-    }
-
-    const decrement = () => {
-        setOffset(0);
-        setCurrentSlide(0);
-    }
-
-    if (offset === 500) decrement();
-
     setTimeout(() => {
         if(currentSlide === itens - 1) {
             setOffset(0);
