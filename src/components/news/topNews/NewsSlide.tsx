@@ -6,9 +6,10 @@ import styles from "./newsSlide.module.scss";
 interface NewsSlideProps {
     title: string;
     imageUrl: string;
+    itens: number;
 }
 
-export default function NewsSlide({ title, imageUrl }: NewsSlideProps) {
+export default function NewsSlide({ title, imageUrl, itens }: NewsSlideProps) {
     const [offset, setOffset] = useState<number>(0);
     const [currentSlide, setCurrentSlide] = useState<number>(0);
 
@@ -24,7 +25,15 @@ export default function NewsSlide({ title, imageUrl }: NewsSlideProps) {
 
     if (offset === 500) decrement();
 
-    setTimeout(increment, 5000);
+    setTimeout(() => {
+        if(currentSlide === itens - 1) {
+            setOffset(0);
+            setCurrentSlide(0);
+        } else {
+            setOffset(offset + 100);
+            setCurrentSlide(currentSlide + 1);
+        }
+    }, 5000);
 
     return (
         <>

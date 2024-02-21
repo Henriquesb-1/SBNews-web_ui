@@ -17,8 +17,8 @@ export default async function TopNews() {
         if (topNews.length === 0) {
             return <></>
         } else {
-            return topNews.map((topNews, index: number) =>
-                <NewsSlide key={`top-news-${topNews.id}`} title={topNews.title} imageUrl={topNews.imageUrl} />
+            return topNews.map((news, index: number) =>
+                <NewsSlide key={`top-news-${news.id}`} title={news.title} imageUrl={news.imageUrl} itens={topNews.length} />
             )
         }
     }
